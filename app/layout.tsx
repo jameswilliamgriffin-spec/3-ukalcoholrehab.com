@@ -2,9 +2,9 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Alcohol Rehab Near Me | Private Rehab UK | Wellbourne",
+  title: "Find Alcohol Rehab Near You | UK Locations & Treatment Guide",
   description:
-    "Private Alcohol Rehab and drug rehab in Warwickshire, UK. Compassionate support for Alcohol Dependence, detox, therapy and ongoing recovery.",
+    "Find alcohol rehab near you. Explore residential treatment locations across the UK, understand whether to stay local or travel for care, and get compassionate guidance on your options.",
 };
 
 export const viewport: Viewport = {
