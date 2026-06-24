@@ -300,26 +300,7 @@ export function WellbourneMicrosite() {
         )}
       </header>
 
-      <section id="top" className="hero page-shell">
-        <motion.div {...reveal} className="hero-copy">
-          <SectionLabel>The UK&apos;s guide to alcohol rehab</SectionLabel>
-          <h1>Find the space<br />to begin again.</h1>
-          <p>
-            Clear, compassionate guidance on alcohol rehab in the UK—wherever
-            you live, and whatever brought you here.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <a className="button button-brand" href={phoneHref}>
-              <Phone size={17} />
-              Speak to someone
-            </a>
-            <a className="button button-light" href="#guides">
-              Explore the guide
-              <ArrowDown size={17} />
-            </a>
-          </div>
-        </motion.div>
-
+      <section id="top" className="hero">
         <motion.div
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -331,10 +312,30 @@ export function WellbourneMicrosite() {
             alt="A person walking along a quiet woodland path in morning light"
             fill
             className="object-cover"
-            sizes="(max-width: 900px) 100vw, 60vw"
+            sizes="100vw"
             priority
           />
           <div className="hero-image-scrim" />
+
+          <motion.div {...reveal} className="hero-copy">
+            <SectionLabel>The UK&apos;s guide to alcohol rehab</SectionLabel>
+            <h1>Find the space<br />to begin again.</h1>
+            <p>
+              Clear, compassionate guidance on alcohol rehab in the UK—wherever
+              you live, and whatever brought you here.
+            </p>
+            <div className="hero-actions">
+              <a className="button button-brand" href={phoneHref}>
+                <Phone size={17} />
+                Speak to someone
+              </a>
+              <a className="button button-light" href="#guides">
+                Explore the guide
+                <ArrowDown size={17} />
+              </a>
+            </div>
+          </motion.div>
+
           <div className="hero-caption">
             <MapPin size={16} />
             Support can start wherever you are
@@ -343,13 +344,13 @@ export function WellbourneMicrosite() {
             <span>UK</span>
             <small>Independent<br />rehab guide</small>
           </div>
-        </motion.div>
 
-        <div className="hero-trust">
-          <div><LockKeyhole /><span><b>100% confidential</b>Private from your first call</span></div>
-          <div><BadgeCheck /><span><b>CQC registered care</b>Standards you can check</span></div>
-          <div><Clock3 /><span><b>Here every day</b>Talk when you feel ready</span></div>
-        </div>
+          <div className="hero-trust">
+            <div><LockKeyhole /><span><b>100% confidential</b>Private from your first call</span></div>
+            <div><BadgeCheck /><span><b>CQC registered care</b>Standards you can check</span></div>
+            <div><Clock3 /><span><b>Here every day</b>Talk when you feel ready</span></div>
+          </div>
+        </motion.div>
       </section>
 
       <section id="understanding" className="section-pad">
@@ -453,10 +454,10 @@ export function WellbourneMicrosite() {
         <div className="page-shell">
           <motion.div
             {...reveal}
-            style={{ marginTop: "44px", paddingTop: "36px", borderTop: "1px solid var(--line)", display: "flex", flexWrap: "wrap", gap: "0", alignItems: "flex-start" }}
+            className="statistics-highlights"
           >
-            <div style={{ display: "flex", alignItems: "center", gap: "20px", paddingRight: "40px" }}>
-              <svg width="110" height="110" viewBox="0 0 110 110" aria-hidden="true" style={{ flexShrink: 0 }}>
+            <div className="statistics-highlight">
+              <svg viewBox="0 0 110 110" aria-hidden="true">
                 <circle cx="55" cy="55" r="44" fill="none" stroke="rgba(17,24,39,0.1)" strokeWidth="9" />
                 <g transform="rotate(-90 55 55)">
                   <motion.circle
@@ -474,13 +475,13 @@ export function WellbourneMicrosite() {
                 <text x="55" y="51" textAnchor="middle" fontSize="19" fontWeight="700" fill="#111827" fontFamily="inherit">47%</text>
                 <text x="55" y="65" textAnchor="middle" fontSize="9.5" fill="#7a8189" fontFamily="inherit">completed</text>
               </svg>
-              <p style={{ margin: 0, fontSize: "13px", color: "#5c6570", lineHeight: "1.65", maxWidth: "170px" }}>
+              <p>
                 left treatment successfully, free from alcohol or drug dependence
               </p>
             </div>
-            <div style={{ width: "1px", background: "var(--line)", alignSelf: "stretch", margin: "0 40px", minHeight: "80px" }} aria-hidden="true" />
-            <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
-              <svg width="110" height="110" viewBox="0 0 110 110" aria-hidden="true" style={{ flexShrink: 0 }}>
+            <div className="statistics-highlight-divider" aria-hidden="true" />
+            <div className="statistics-highlight">
+              <svg viewBox="0 0 110 110" aria-hidden="true">
                 <circle cx="55" cy="55" r="44" fill="none" stroke="rgba(17,24,39,0.1)" strokeWidth="9" />
                 <g transform="rotate(-90 55 55)">
                   <motion.circle
@@ -498,7 +499,7 @@ export function WellbourneMicrosite() {
                 <text x="55" y="51" textAnchor="middle" fontSize="19" fontWeight="700" fill="#111827" fontFamily="inherit">57%</text>
                 <text x="55" y="65" textAnchor="middle" fontSize="9.5" fill="#7a8189" fontFamily="inherit">self-referred</text>
               </svg>
-              <p style={{ margin: 0, fontSize: "13px", color: "#5c6570", lineHeight: "1.65", maxWidth: "170px" }}>
+              <p>
                 self-referred or were referred by family or friends — no GP required
               </p>
             </div>
